@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Be Organised</title>
+
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron text-center">
+        <h1> Be Organised </h1>
+        <p id = "hello"> A simple to do list </p>
+      </div>
+
+      <!-- Add and delete buttons -->
+      <div class="row">
+        <div class = "col-xs-12 col-sm-3">
+          <input id = "dateField" type="date" value="2016-08-26">
+        </div>
+        <div class = "col-xs-12 col-sm-6">
+          <input id = "description" placeholder="Description" type="text">
+        </div>
+        <div class = "col-xs-12 col-sm-3">
+          <button id="addButton" type="button" class="col-xs-12 btn btn-lg btn-primary" onclick="addFunction()">Add</button>
+        </div>
+        <!--<div class = "col-xs-12">
+          <button type="button" class="col-xs-12 col-sm-3 btn btn-lg btn-danger" onclick = "deleteFunction()">Delete</button>
+        </div>-->
+      </div>
+
+      <!-- Add Items -->
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <table class="table">
+              <thead class="tableHeader">
+                <tr>
+                  <th class="col-xs-4">Date</th>
+                  <th class="col-xs-8">Description</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/customJS.js"></script>
+
+  </body>
+</html>
