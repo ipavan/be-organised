@@ -141,7 +141,7 @@ function sortFunction() {
 }
 
 
-
+//Javascript object that contains each rows content
 function rowElement() {
 	this.fullDateValue = "";
 	this.date = "";
@@ -149,15 +149,21 @@ function rowElement() {
 	this.added = false;
 }
 
-/*$(document).ready(function() 
-    { 
-    	$("#mainTable").tablesorter(); 
-        $("#addFunction").click(function() {
-        	$("#mainTable").trigger("update");
-        	var sorting = [[0,0]]; 
-        // sort on the first column 
-            $("table").trigger("sorton",[sorting]); 
-        	return false;
-        });
-    } 
-); */
+
+
+$(document).ready (function(){
+    $("#warning-alert").hide();
+    $("#addButton").click(function showAlert() {
+    	if (document.getElementById("description").value == "") {
+        	$("#warning-alert").alert();
+        	$("#warning-alert").fadeTo(2000, 500).slideUp(500, function(){
+            	$("#warning-alert").slideUp(500);
+        	});
+        }
+        else {
+        	addFunction();
+        }   
+    });
+});
+
+
