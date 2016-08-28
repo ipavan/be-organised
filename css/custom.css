@@ -5,3 +5,9 @@
 .tableHeader {
 	font-size: 125%
 }
+
+.rightAlign {
+    position: absolute;
+    right: 0px;
+    padding: 0px;
+}
