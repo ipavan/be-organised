@@ -54,6 +54,8 @@ function addFunction() {
 
 }
 
+
+
 function deleteFunction(x) {
 	//Deletes a task from the to do list
 
@@ -63,6 +65,8 @@ function deleteFunction(x) {
     //delete entire row
     document.getElementById("mainTable").deleteRow(row);
 }
+
+
 
 function sortFunction() {
 	//Sorts the to do list by date
@@ -135,6 +139,8 @@ function sortFunction() {
 
 
 }
+
+
 
 function rowElement() {
 	this.fullDateValue = "";
