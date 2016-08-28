@@ -23,7 +23,7 @@
       <!-- Add and delete buttons -->
       <div class="row">
         <div class = "col-xs-12 col-sm-3">
-          <input id = "dateField" type="date" value="2016-08-26" class="form-control">
+          <input id = "dateInput" type="date" value="2016-08-28" class="form-control">
         </div>
         <div class = "col-xs-12 col-sm-6">
           <input id = "description" placeholder="Description" type="text" class="form-control">
@@ -47,7 +47,9 @@
             <table class="table table-hover" id="mainTable">
               <thead class="tableHeader">
                 <tr>
-                  <th class="col-xs-4 col-sm-3">Date</th>
+                  <th class="col-xs-4 col-sm-3" id="dateHeader">Date
+                    <button class="rightAlign btn btn-info" type="button" onclick="sortFunction()">Sort</button>
+                  </th>
                   <th class="col-xs-7 col-sm-8">Description</th>
                   <th class="col-xs-1 col-sm-1"></th>
                 </tr>
@@ -58,12 +60,14 @@
           </div>
         </div>
       </div>
+
+
     </div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/customJS.js"></script>
-
+    <!--<script type="text/javascript" src="js/tablesorter.js"></script> -->
   </body>
 </html>

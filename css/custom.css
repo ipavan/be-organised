@@ -7,7 +7,7 @@
 }
 
 .rightAlign {
-    position: absolute;
+    float: right;
     right: 0px;
     padding: 0px;
 }
