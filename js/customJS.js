@@ -20,26 +20,13 @@ function addFunction() {
     var dateValClean = someVal.replace(/-/g, "");
 
     //add content to each of the three cells in the row
-    date.innerHTML = '<input id="dateField" type="date" value="' + someVal + '" class="form-control">';
+    date.innerHTML = '<input id="dateField" oninput="dateEdit(this, this.value)" type="date" value="' + someVal + '" class="form-control">';
 
     //id and value fields added for sorting purposes
     //id is to distinguish between the date and description fields
     //the value attribute is a unhyphened date value used for sorting by dates
     date.setAttribute('id', 'dateField');
     date.setAttribute('value', dateValClean);
-
-
-    //TODO fix up sort when user changes date
-    /*date.addEventListener("input", function() {
-    	var x = document.getElementById("dateField");
-    	console.log(x);
-
-    	//dateValClean = someVal.replace(/-/g, "");
-
-    	//add content to each of the three cells in the row
-    	//date.innerHTML = '<input id="dateField" type="date" value="' + someVal + '" class="form-control">';
-	}, false);*/
-
 
     description.innerHTML = '<div contentEditable>' + document.getElementById("description").value + '</div>';
 
@@ -52,6 +39,17 @@ function addFunction() {
     document.getElementById("description").value = "";
     //sortFunction();
 
+}
+
+
+function dateEdit(x, y) {
+	//when the date gets edited, this writes the new date information
+	//into the html
+	var dateValClean = y.replace(/-/g, "");
+
+	x.parentNode.setAttribute('value', dateValClean);
+
+	x.parentNode.innerHTML = '<input id="dateField" oninput="dateEdit(this, this.value)" type="date" value="' + y + '" class="form-control">';
 }
 
 
